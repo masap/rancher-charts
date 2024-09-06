@@ -993,10 +993,10 @@ entries:
       catalog.cattle.io/ui-component: rancher-supportability-review
     apiVersion: v1
     appVersion: v1.0.0
-    created: "2024-08-21T14:43:40.834529+05:30"
+    created: "2024-09-06T17:28:18.717470+05:30"
     description: The rancher-supportability-review operator enables the functionality
       of Supportability Reviews for Rancher.
-    digest: 744ae276658f05a8a7b5dafdbd2a353254128f03f9f37bd93fe1e74f425e6e32
+    digest: 5c54466d32f1ba325d5a4b9f42c8657e9c753d743f52788d475bf51e98d9bbc1
     icon: https://charts.rancher.io/assets/logos/cis-kube-bench.svg
     keywords:
     - support
@@ -1011,9 +1011,9 @@ entries:
       catalog.cattle.io/namespace: sr-operator-system
       catalog.cattle.io/release-name: rancher-supportability-review-crd
     apiVersion: v1
-    created: "2024-06-30T14:22:30.014596+05:30"
+    created: "2024-09-06T17:32:09.297043+05:30"
     description: Installs the CRDs for rancher-supportability-review.
-    digest: 3af9632037ac3d904f8cadd3927a3572db22d60e8df7068e6352d946795b3b7a
+    digest: 508b43070e3b5e4bdc1072a72c4ed6db308070888ab942f3ddc47963c829a20d
     name: rancher-supportability-review-crd
     type: application
     urls:

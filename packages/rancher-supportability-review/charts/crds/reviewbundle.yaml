@@ -70,6 +70,20 @@ spec:
                   type: object
                 nullable: true
                 type: array
+              display:
+                nullable: true
+                properties:
+                  error:
+                    type: boolean
+                  message:
+                    nullable: true
+                    type: string
+                  state:
+                    nullable: true
+                    type: string
+                  transitioning:
+                    type: boolean
+                type: object
               timestamp:
                 nullable: true
                 type: string
