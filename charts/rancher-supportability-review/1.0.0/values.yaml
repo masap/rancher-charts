@@ -11,6 +11,7 @@ rancher:
   srImageRepository: "ghcr.io/rancher/supportability-review:latest"
 
 s3:
+  useS3: false
   useAwsS3: true
   endpoint: ""
   region: ""

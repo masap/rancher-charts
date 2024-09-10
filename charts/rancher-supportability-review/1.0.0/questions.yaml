@@ -15,68 +15,76 @@ questions:
   required: true
   group: Rancher Configuration
 
-- variable: s3.useAwsS3
-  label: Use AWS S3 Endpoint
-  default: "true"
-  description: "Use AWS S3 Endpoint"
+- variable: s3.useS3
+  label: Upload to S3 compatible storage
+  default: "false"
+  description: "Upload to S3 compatible storage"
   type: boolean
   group: S3 Configuration
-  show_subquestion_if: false
+  show_subquestion_if: true
   subquestions:
-  - variable: s3.endpoint
-    label: S3 endpoint URL
-    default: "https://<hostname>:<port no>"
-    description: "The URL of S3 endpoint."
+  - variable: s3.useAwsS3
+    label: Use AWS S3 Endpoint
+    default: "true"
+    description: "Use AWS S3 Endpoint"
+    type: boolean
+    group: S3 Configuration
+    show_subquestion_if: false
+    subquestions:
+    - variable: s3.endpoint
+      label: S3 endpoint URL
+      default: "https://<hostname>:<port no>"
+      description: "The URL of S3 endpoint."
+      type: string
+      required: true
+
+  - variable: s3.region
+    label: Region
+    default: "us-east-2"
+    description: "Region"
     type: string
     required: true
+    group: S3 Configuration
 
-- variable: s3.region
-  label: Region
-  default: "us-east-2"
-  description: "Region"
-  type: string
-  required: true
-  group: S3 Configuration
+  - variable: s3.bucket
+    label: Bucket name
+    default: ""
+    description: "Bucket name"
+    type: string
+    required: true
+    group: S3 Configuration
 
-- variable: s3.bucket
-  label: Bucket name
-  default: ""
-  description: "Bucket name"
-  type: string
-  required: true
-  group: S3 Configuration
+  - variable: s3.folder
+    label: Folder name
+    default: ""
+    description: "Folder name"
+    type: string
+    required: false
+    group: S3 Configuration
 
-- variable: s3.folder
-  label: Folder name
-  default: ""
-  description: "Folder name"
-  type: string
-  required: false
-  group: S3 Configuration
+  - variable: s3.insecureTLSSkipVerify
+    label: Skip TLS Verifications
+    default: false
+    description: "Skip TLS Verifications"
+    type: boolean
+    required: true
+    group: S3 Configuration
 
-- variable: s3.insecureTLSSkipVerify
-  label: Skip TLS Verifications
-  default: false
-  description: "Skip TLS Verifications"
-  type: boolean
-  required: true
-  group: S3 Configuration
+  - variable: s3.accessKeyId
+    label: Access Key ID
+    default: ""
+    description: "Access Key ID"
+    type: string
+    required: true
+    group: S3 Configuration
 
-- variable: s3.accessKeyId
-  label: Access Key ID
-  default: ""
-  description: "Access Key ID"
-  type: string
-  required: true
-  group: S3 Configuration
-
-- variable: s3.secretAccessKey
-  label: Secret Access Key
-  default: ""
-  description: "Secret Access Key"
-  type: password
-  required: true
-  group: S3 Configuration
+  - variable: s3.secretAccessKey
+    label: Secret Access Key
+    default: ""
+    description: "Secret Access Key"
+    type: password
+    required: true
+    group: S3 Configuration
 
 - variable: rancher.srImageRepository
   label: SR image Repository
@@ -97,7 +105,7 @@ questions:
 - variable: image.tag
   label: SR Operator image tag
   default: "latest"
-  description: "The repository of SR Operator image tag."
+  description: "The tag of SR Operator image."
   type: string
   required: false
   group: Debug
