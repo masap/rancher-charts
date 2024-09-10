@@ -85,3 +85,19 @@ questions:
   type: string
   required: false
   group: Debug
+
+- variable: image.repository
+  label: SR Operator image Repository
+  default: "ghcr.io/rancher/supportability-review-operator"
+  description: "The repository of SR Operator image."
+  type: string
+  required: false
+  group: Debug
+
+- variable: image.tag
+  label: SR Operator image tag
+  default: "latest"
+  description: "The repository of SR Operator image tag."
+  type: string
+  required: false
+  group: Debug
