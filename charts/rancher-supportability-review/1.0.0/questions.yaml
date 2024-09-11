@@ -16,9 +16,9 @@ questions:
   group: Rancher Configuration
 
 - variable: s3.useS3
-  label: Upload to S3 compatible storage
+  label: Upload bundle to S3 compatible storage
   default: "false"
-  description: "Upload to S3 compatible storage"
+  description: "Upload bundle to S3 compatible storage"
   type: boolean
   group: S3 Configuration
   show_subquestion_if: true
