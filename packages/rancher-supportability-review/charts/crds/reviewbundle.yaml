@@ -20,6 +20,9 @@ spec:
         properties:
           spec:
             properties:
+              data:
+                nullable: true
+                type: string
               debug:
                 type: boolean
               dev:
@@ -38,14 +41,14 @@ spec:
                 type: array
               parallelCollection:
                 type: boolean
+              reportJSON:
+                nullable: true
+                type: string
               sonobuoyNamespace:
                 nullable: true
                 type: string
               sonobuoyTimeout:
                 type: integer
-              reportJSON:
-                nullable: true
-                type: string
             type: object
           status:
             properties:

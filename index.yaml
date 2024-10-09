@@ -1011,9 +1011,9 @@ entries:
       catalog.cattle.io/namespace: sr-operator-system
       catalog.cattle.io/release-name: rancher-supportability-review-crd
     apiVersion: v1
-    created: "2024-10-09T10:38:28.323011475+09:00"
+    created: "2024-10-09T16:30:35.7223953+09:00"
     description: Installs the CRDs for rancher-supportability-review.
-    digest: aec388593dde155919b03e9e04efaff4fe874a7af306c47d80c5565274545530
+    digest: 63c78c85584ba7727e9e5623b2828a6e2caab65abb6fdda6f395791ea87b62e4
     name: rancher-supportability-review-crd
     type: application
     urls:
