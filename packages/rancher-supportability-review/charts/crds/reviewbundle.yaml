@@ -43,6 +43,9 @@ spec:
                 type: string
               sonobuoyTimeout:
                 type: integer
+              reportJSON:
+                nullable: true
+                type: string
             type: object
           status:
             properties:
