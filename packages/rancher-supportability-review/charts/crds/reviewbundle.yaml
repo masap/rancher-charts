@@ -33,6 +33,9 @@ spec:
                   type: string
                 nullable: true
                 type: array
+              fileName:
+                nullable: true
+                type: string
               includeClusters:
                 items:
                   nullable: true
